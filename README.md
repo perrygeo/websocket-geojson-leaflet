@@ -10,8 +10,8 @@ Write a script that generates a line-delimited stream of GeoJSON features
 to stdout. This can be written in any language.
 
     #!/bin/bash
-    fio cat ~/data/S_USA.RangerDistrict/S_USA.RangerDistrict.shp \
-        | rio zonalstats --sequence --all-touched --prefix srtm_ -r ~/data/srtm/srtm_med.tif
+    fio cat countries.shp \
+        | rio zonalstats --sequence -r elevation.tif
 
 Make sure it's executable (`chmod +x script.sh`)
 
